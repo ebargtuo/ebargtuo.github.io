@@ -1,0 +1,7 @@
+exclude: 
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - package.json
+    - gulpfile.js
+    - node_modules
