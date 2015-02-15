@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -17,15 +17,18 @@
   },
   "projectConfig": {
     "directories": {
-      "vendor": "vendor"
+      "vendor": "vendor",
+      "dist": "_site"
     }
   },
   "homepage": "https://ebargtuo.github.io/",
   "private": true,
   "devDependencies": {
     "del": "^1.1.1",
+    "glob": "^4.3.5",
     "gulp": "^3.8.11",
     "gulp-load-plugins": "^0.8.0",
+    "mocha": "^2.1.0",
     "normalize.css": "^3.0.2",
     "run-sequence": "^1.0.2"
   }
