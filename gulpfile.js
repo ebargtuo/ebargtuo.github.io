@@ -18,7 +18,8 @@ var dirs = pkg.projectConfig.directories;
 
 gulp.task('clean', function (done) {
     require('del')([
-        dirs.vendor
+        dirs.vendor,
+        dirs.dist
     ], done);
 });
 
