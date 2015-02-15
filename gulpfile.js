@@ -6,6 +6,8 @@ var plugins = require('gulp-load-plugins')();
 
 var runSequence = require('run-sequence');
 
+var childProcess = require('child_process');
+
 var pkg = require('./package.json');
 var dirs = pkg.projectConfig.directories;
 
@@ -29,6 +31,10 @@ gulp.task('copy:normalize', function () {
                .pipe(gulp.dest(dirs.vendor + '/css'));
 });
 
+gulp.task('jekyll:build', function () {
+    return childProcess.spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'});
+});
+
 // ---------------------------------------------------------------------
 // | Main tasks                                                        |
 // ---------------------------------------------------------------------
@@ -37,6 +43,7 @@ gulp.task('build', function (done) {
     runSequence(
         ['clean'],
         'copy',
+        'jekyll:build',
     done);
 });
 
