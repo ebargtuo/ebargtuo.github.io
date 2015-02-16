@@ -13,7 +13,8 @@ var expectedFilesInDistDir = [
 
     'vendor/',
         'vendor/css/',
-            'vendor/css/normalize.css'
+            'vendor/css/normalize.css',
+            'vendor/css/skeleton.css'
 
 ];
 

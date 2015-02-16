@@ -24,11 +24,17 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('copy', [
-    'copy:normalize'
+    'copy:normalize',
+    'copy:skeleton'
 ]);
 
 gulp.task('copy:normalize', function () {
     return gulp.src('node_modules/normalize.css/normalize.css')
+               .pipe(gulp.dest(dirs.vendor + '/css'));
+});
+
+gulp.task('copy:skeleton', function () {
+    return gulp.src('node_modules/skeleton.css/skeleton.css')
                .pipe(gulp.dest(dirs.vendor + '/css'));
 });
 
