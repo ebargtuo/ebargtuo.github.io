@@ -25,7 +25,9 @@ gulp.task('clean', function (done) {
 
 gulp.task('copy', [
     'copy:normalize',
-    'copy:skeleton'
+    'copy:skeleton',
+    'copy:morpheus',
+    'copy:easings'
 ]);
 
 gulp.task('copy:normalize', function () {
@@ -36,6 +38,16 @@ gulp.task('copy:normalize', function () {
 gulp.task('copy:skeleton', function () {
     return gulp.src('node_modules/skeleton.css/skeleton.css')
                .pipe(gulp.dest(dirs.vendor + '/css'));
+});
+
+gulp.task('copy:morpheus', function () {
+    return gulp.src('node_modules/morpheus/morpheus.min.js')
+               .pipe(gulp.dest(dirs.vendor + '/js'));
+});
+
+gulp.task('copy:easings', function () {
+    return gulp.src('node_modules/morpheus/src/easings.js')
+               .pipe(gulp.dest(dirs.vendor + '/js'));
 });
 
 gulp.task('jekyll:build', function () {

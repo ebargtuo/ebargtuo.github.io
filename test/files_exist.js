@@ -11,10 +11,17 @@ var expectedFilesInDistDir = [
 
     'index.html',
 
+    'assets/',
+        'assets/js/',
+            'assets/js/main.js',
+
     'vendor/',
         'vendor/css/',
             'vendor/css/normalize.css',
-            'vendor/css/skeleton.css'
+            'vendor/css/skeleton.css',
+        'vendor/js/',
+            'vendor/js/easings.js',
+            'vendor/js/morpheus.min.js'
 
 ];
 
