@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "gulp build",
+    "serve": "bundle exec jekyll serve",
     "test": "mocha"
   },
   "repository": {
